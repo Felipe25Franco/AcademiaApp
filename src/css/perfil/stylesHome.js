@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         resizeMode: 'cover',
-        justifyContent: 'end',
+        justifyContent: 'center',
         marginTop: 30,
     },
 
