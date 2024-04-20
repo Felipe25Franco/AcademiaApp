@@ -3,7 +3,8 @@ import { View, ImageBackground, Image, Text, TouchableOpacity } from 'react-nati
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from '../../css/perfil/stylesHome';
 
-export function Home() {
+export function Home({sexo}) {
+    const silhuetaImagem = sexo === 'masculino' ? require("../../assets/silhuetaMasculina.png") : require("../../assets/silhuetaFeminina.png");
     return (
         <ImageBackground
             source={require("../../assets/fundoHome.jpg")}
@@ -12,13 +13,13 @@ export function Home() {
             <View style={styles.container}>
                 <View style={styles.topContainer}>
                     <Image
-                        source={require("../../assets/silhuetaMasculina.png")}
+                        source={silhuetaImagem}
                         style={styles.corpoSilhueta}
                     />
                     <View style={styles.infoContainer}>
                         <Text style={styles.labelInfo}>Nome: John Doe</Text>
                         <Text style={styles.labelInfo}>Idade: 27 anos</Text>
-                        <Text style={styles.labelInfo}>Sexo: Masculino</Text>
+                        <Text style={styles.labelInfo}>Sexo: {sexo === 'masculino' ? 'Masculino' : 'Feminino'}</Text>
                         <Text style={styles.labelInfo}>Altura: 177 cm</Text>
                         <Text style={styles.labelInfo}>Peso: 80.5 kg</Text>
                         <Text style={styles.labelInfo}>Idade: 30 anos</Text>

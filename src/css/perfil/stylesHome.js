@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         borderWidth: 1,
         width: '100%',
-        backgroundColor: 'white',
+        backgroundColor: '#FFD700',
     },
 
     iconButton: {

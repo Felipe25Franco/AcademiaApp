@@ -6,7 +6,7 @@ import { Home } from './pages/perfil/home';
 
 const Stack = createStackNavigator();
 
-export function Routes(){
+export function Routes({sexo}){
     return(        
         <Stack.Navigator initialRouteName="Login">
             <Stack.Screen
@@ -25,10 +25,11 @@ export function Routes(){
                 options={{ headerShown: false }}
             />         
             <Stack.Screen
-                name="Home"
-                component={Home}
-                options={{ headerShown: false }}
-            />                     
+                 name="Home"
+                 options={{ headerShown: false }}
+               >
+                 {() => <Home sexo={sexo} />}
+            </Stack.Screen>                   
         </Stack.Navigator>    
     )
 }

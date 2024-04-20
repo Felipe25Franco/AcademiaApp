@@ -21,6 +21,11 @@ export function Registro() {
                         style={styles.input}
                         placeholder="Digite um Nome de Usuario"
                     />
+                    <Text style={styles.label}>Sexo:</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Escolha seu sexo"
+                    />
                     <Text style={styles.label}>e-mail:</Text>
                     <TextInput
                         style={styles.input}
